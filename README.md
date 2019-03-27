@@ -1,4 +1,4 @@
-# ads-spog-automatedtests-e2e
+# WebDriverIO structure
 Project for the e2e automated tests
 
 After cloning this repository, execute the following comamnd to install the dependecies: npm install
