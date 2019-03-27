@@ -1,0 +1,48 @@
+{
+  "name": "ads-spog-automatedtests-e2e",
+  "version": "1.0.0",
+  "description": "e2e automated tests",
+  "main": "index.js",
+  "scripts": {
+    "cucumber": "docker-compose up -d && ./node_modules/.bin/wdio wdio.conf.js",
+    "cucumber:local": "./node_modules/.bin/wdio wdio-local.conf.js",
+    "seleniumContainers": "docker-compose up -d",
+    "VNC:ChromeContainer": "open vnc://user:secret@localhost:5900",
+    "VNC:FirefoxContainer": "open vnc://user:secret@localhost:5901"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdvancedDisposal/ads-spog-automatedtests-e2e.git"
+  },
+  "author": "Arthur Braga and Fernando Teixeira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdvancedDisposal/ads-spog-automatedtests-e2e/issues"
+  },
+  "homepage": "https://github.com/AdvancedDisposal/ads-spog-automatedtests-e2e#readme",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "cucumber": "^5.1.0",
+    "webdriverio": "^4.14.4"
+  },
+  "devDependencies": {
+    "selenium-standalone": "^6.16.0",
+    "wdio-cucumber-framework": "^2.2.8",
+    "wdio-docker-service": "^1.5.0",
+    "wdio-selenium-standalone-service": "0.0.12"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  }
+}
